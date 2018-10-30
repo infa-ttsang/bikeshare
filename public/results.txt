@@ -56,3 +56,4 @@ Popular start,Station 3069 with 5138 visits.
 Popular end,Station 3005 with 6262 visits.
 Average distance,3.4527796555018777
 Regular riders,91203
+Number of trips,132427

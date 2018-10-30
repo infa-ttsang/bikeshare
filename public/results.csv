@@ -1,8 +1,8 @@
-Car gas saved,19051.71881
-Car money saved,54868.95017
-Actual duration,1545.084877
-Estimated duration,44.82196702
-Start,
+Car gas saved,19051.718809964466
+Car money saved,54868.95017269766
+Actual duration,1545.0848770706586
+Estimated duration,44.821967021365474
+Start
 0,1783
 1,1346
 2,870
@@ -27,7 +27,7 @@ Start,
 21,4882
 22,3834
 23,2774
-End,
+End
 0,2176
 1,1400
 2,1035
@@ -54,5 +54,6 @@ End,
 23,3054
 Popular start,Station 3069 with 5138 visits.
 Popular end,Station 3005 with 6262 visits.
-Average distance,3.452779656
+Average distance,3.4527796555018777
 Regular riders,91203
+Number of trips,132427
