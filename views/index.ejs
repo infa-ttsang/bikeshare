@@ -1,0 +1,107 @@
+<html>
+  <head>
+    <title>LA Bike Share</title>
+    <link href="/styles.css" rel="stylesheet" type="text/css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    function getInfo(str,print) {
+      var result = null;
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.open("GET", "/results.txt", false);
+      xmlhttp.send();
+      if (xmlhttp.status==200) {
+        result = xmlhttp.responseText;
+        var line = result.split(/\r?\n/);
+        console.log("length of line " + line.length)
+        for (var i = 0; i < line.length; i++) { 
+          if(line[i].indexOf(str) > -1) {
+            console.log(line[i].substring(line[i].indexOf(str)));
+            if(line[i].indexOf(".") > -1) {
+              if(print)
+              document.write(line[i].substring(str.length+1, line[i].indexOf(".")+3));
+              return line[i].substring(str.length+1, line[i].indexOf(".")+3);
+            } else {
+              if(print)
+              document.write(line[i].substring(str.length+1));
+              return line[i].substring(str.length+1);
+            }
+          }
+        }
+      }   
+    }
+
+    </script>
+
+  </head>
+  <body>
+    
+    <div class="one">
+      <h1 class="one">some INTERESTING facts about BIKESHARING in LA</h1>
+    </div>
+
+    <div class="two">
+      <p class="two">From July 2016 to March 2017, there were 132427 total rides in the LA bikeshare system. Let's see where we went...</p>
+    </div>
+
+    <div class="three">
+      <p>The most popular start station was <script>getInfo("Popular start",true)</script>
+      The most popular end station was <script>getInfo("Popular end",true)</script></p>
+    </div>
+
+    <div class="three" style="background-color:FF8C00">
+      <p>There were <script>getInfo("Regular riders",true)</script> regular riders. </p>
+    </div>
+
+    <div class="three">
+      <p>Each ride was <script>getInfo("Average distance",true)</script> miles on average. After the 132427 rides, that means about <script>getInfo("Car gas saved",true)</script> gallons of gas were saved. That's equivalent to $<script>getInfo("Car money saved", true)</script>!</p>
+      <span id="dot"></span>
+      <script>
+        var numDots = Math.floor(parseFloat(getInfo("Car gas saved",false)));
+        for (var i=0;i<numDots;i++) {  
+          var g = document.createElement('div');
+          g.setAttribute("class", "dot");
+          document.getElementById('dot').appendChild(g);
+        }
+      </script>
+      <p>There are <script>document.write(Math.floor(parseFloat(getInfo("Car gas saved",false))))</script> dots in this graphic to help picture the large amount of gas that was saved.</p>
+    </div>
+
+    <div class="three" style="background-color:FF8C00">
+      <p>People estimated that they would be gone for an average of 
+          <script>getInfo("Estimated duration",true)</script> 
+        minutes. But on average they were actually gone for 
+          <script>getInfo("Actual duration",true)</script> 
+        minutes. That's 
+          <script>document.write(Math.floor(parseFloat(getInfo("Actual duration",false)/60)))</script> 
+        hours. Hmmmm.... </p>
+      <img src="durations.png">
+    </div>
+
+    <div class="three">
+      <p>These are the number of rides that started at each hour. Most people picked up a bike at 5pm.</p>
+      <img src="start.png">
+    </div>
+
+    <div class="three" style="background-color:FF8C00">
+      <p>These are the number of rides that ended at each hour. As one might expect, the hours of 3am-5am were the least frequent times for someone to return a bike.</p>
+      <img src="end.png">
+    </div>
+
+  </body>
+</html>
+
+<!--<div id='circle1'></div>
+<div id='circle2'></div>
+
+
+<br>
+<div style="display:inline-block;margin-left: 50px;"><p><script>getInfo("Estimated duration",true)</script> minutes</p></div>
+<div style="display:inline-block;margin-left: 75px;"> 
+<p style="padding-left:200px;"><script>getInfo("Actual duration",true)</script> minutes</p>
+</div>
+<script>
+document.getElementById('circle1').style.width = getInfo("Estimated duration",false)/2 + "px";
+document.getElementById('circle2').style.width = getInfo("Actual duration",false)/2 + "px";
+</script>-->
+

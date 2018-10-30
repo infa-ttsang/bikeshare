@@ -1,0 +1,110 @@
+html {
+	height: 100%;
+	overflow: scroll;
+}
+
+body {
+	margin: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	padding: 0;
+	overflow: auto;
+}
+
+#circle1 {
+	height:100px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	background: red;
+	margin-left: 200px;
+	margin-right: auto;
+	display:inline-block;
+    }
+
+.dot {
+	height: 3px;
+	width: 3px;
+	background-color: #8B4513;
+	border-radius: 50%;
+	display: inline-block;
+	padding:1px;
+}
+
+#circle2 {
+	height:100px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	background: red;
+	margin-left: 200px;
+	margin-right: auto;
+	display:inline-block;
+}
+
+div.center {
+	margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+	font-family: "Futura";
+	font-weight: normal;
+	font-variant: small-caps;
+	font-size: 80px;
+	margin-left: 65px;
+	padding-top: 20px;
+}
+
+img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p {
+	color: #101010;
+	font-family: 'Futura', sans-serif;
+	margin-left:100px;
+	margin-right:100px;
+}
+
+p.two {
+	color: #101010;
+	font-family: 'Futura', sans-serif;
+	font-size:30px;
+	margin-left:100px;
+	margin-right:100px;
+}
+
+div.one {
+	background-image: url("title.jpg");
+	//background: linear-gradient(rgba(249, 119, 76,.75), rgba(128, 42, 12,.85));
+	//background-position: 50 -50px, -50px;
+	height: 400px;
+	vertical-align: middle;
+	position: relative;
+	overflow: auto;
+}
+
+div.two {
+	background-color: white;
+	height: auto; 
+	overflow-y: scroll;
+	position: relative;
+}
+
+div.three {
+	background-color:#F0E68C;
+	float:left;
+	height: auto;
+	width: 100%;
+	overflow-y: scroll;
+	position: relative;
+	padding: 25px 25px 25px 25px;
+}
