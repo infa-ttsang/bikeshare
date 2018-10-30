@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/infa-ttsang/bikeshare#readme",
   "dependencies": {
+    "ejs": "^6.4.1",
     "express": "^4.16.4"
   }
 }
