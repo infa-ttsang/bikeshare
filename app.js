@@ -13,5 +13,5 @@ app.get('/', function(req, res){
 	res.render("index.ejs");
 });
 
-app.listen(5000);
+app.listen(process.env.PORT || 8080);
 console.log("Server is running. Now open 'http://localhost:8080' in a browser.");
