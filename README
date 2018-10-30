@@ -1,0 +1,12 @@
+Node JS application deployed using Heroku.
+
+Three metrics / trends displayed:
+1) amount of gas saved
+2) estimated versus actual duration of ride
+3) number of rides that start and stop at each hour
+
+Used Java to analyze dataset.
+Saved analyzed data as csv file to create graphs using Microsoft Excel.
+Used HTML, CSS, and Javascript to design web page.
+
+Used image from https://bellanyc.com/wp-content/uploads/2015/04/Los-Angeles-Slider1.jpg.
